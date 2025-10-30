@@ -1,0 +1,152 @@
+/* frontend/src/components/Portfolio/portfolio.css */
+.portfolio-theme-minimal { background: #f8fafc; background-color: #f9fafb; color: #111827; padding-top:20px; min-height:100vh; }
+.portfolio-theme-dark { background: #0f1724; background-color: #0f172a; color: #f8fafc; padding-top:20px; min-height:100vh; }
+
+/* header */
+.portfolio-header { display:flex; align-items:center; justify-content:space-between; }
+
+/* animated title */
+.animated-title { font-size:28px; margin:0; animation: floatIn 600ms ease forwards; opacity:0; transform: translateY(8px); }
+@keyframes floatIn { to { opacity:1; transform: translateY(0); } }
+
+/* cards */
+.portfolio-card { border-radius:14px; padding:16px; transition: transform .22s ease, box-shadow .22s ease; background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.9)); }
+.animated-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(2,6,23,0.12); }
+
+/* portfolio top */
+.portfolio-top { display:flex; gap:12px; align-items:flex-start; }
+.thumb { width:72px; height:72px; border-radius:12px; overflow:hidden; background:#eef2ff; display:flex; align-items:center; justify-content:center; }
+.thumb img { width:100%; height:100%; object-fit:cover; }
+.thumb-fallback { font-weight:800; color:#6366f1; font-size:28px; }
+.meta h3 { margin:0; }
+
+/* text */
+.desc { color: rgba(15,23,42,0.7); margin-top:6px; line-height:1.25; }
+
+/* bottom */
+.portfolio-bottom { display:flex; justify-content:space-between; align-items:center; margin-top:12px; }
+
+/* tag */
+.tag { display:inline-block; padding:6px 10px; margin-right:8px; margin-top:6px; border-radius:999px; background:#eef2ff; color:#0f172a; font-size:12px; }
+.portfolio-theme-dark .tag { background: rgba(255,255,255,0.06); color:#fff; }
+
+.card { border-radius:12px; box-shadow: 0 8px 20px rgba(2,6,23,0.04); }
+.muted { color:#6b7280; font-size:13px; }
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .portfolio-header { flex-direction: column; gap:12px; align-items:stretch; }
+  .portfolio-top { flex-direction:row; }
+}
+
+.portfolio-theme-dark .card {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f3f4f6;
+}
+
+.portfolio-theme-dark .desc,
+.portfolio-theme-dark p,
+.portfolio-theme-dark h3,
+.portfolio-theme-dark strong {
+  color: #f3f4f6;
+}
+
+.portfolio-theme-dark .tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.portfolio-theme-dark select,
+.portfolio-theme-dark input,
+.portfolio-theme-dark textarea {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+select {
+  background: #fff;
+  color: #111;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.portfolio-theme-dark select {
+  background: rgba(255,255,255,0.9);
+  color: #0f1724;
+}
+
+body.portfolio-dark,
+html.portfolio-dark {
+  background-color: #0f172a;
+}
+
+body.portfolio-minimal,
+html.portfolio-minimal {
+  background-color: #f9fafb;
+}
+
+.portfolio-theme-dark .card {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+.portfolio-theme-minimal .card {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
+
+.portfolio-grid,
+.project-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (min-width: 1100px) {
+  .portfolio-grid,
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1400px) {
+  .portfolio-grid,
+  .project-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* card visuals */
+.portfolio-card,
+.project-card {
+  border-radius: 10px;
+  padding: 16px;
+  background: var(--card-bg, #fff);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .portfolio-card {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .project-card, .card {
+    width: 100%;
+  }
+
+  .portfolio-header select,
+  .portfolio-header button {
+    width: 100%;
+  }
+
+  .portfolio-theme-dark,
+  .portfolio-theme-minimal {
+    padding: 16px;
+  }
+}
