@@ -19,7 +19,17 @@ const UserSchema = new mongoose.Schema({
   skills: { type: [String], default: [] },
   github: { type: String, default: '' },
   linkedin: { type: String, default: '' },
-  phone: { type: String, default: '' },
+  phone: {
+  type: String,
+  default: '',
+  validate: {
+    validator: function(v) {
+      // Allow empty string OR 10 digits only
+      return !v || /^(\d{10})$/.test(v);
+    },
+    message: props => `${props.value} is not a valid 10-digit phone number!`
+  }
+},
   location: { type: String, default: '' },
   education: { type: EducationSchema, default: () => ({}) },
   published: { type: Boolean, default: false }, // publish/unpublish user's portfolio

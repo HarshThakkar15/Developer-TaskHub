@@ -31,6 +31,10 @@ const openLink = (url) => window.open(url, '_blank');
   }, [user]);
 
   const save = async () => {
+    if (form.phone && !/^\d{10}$/.test(form.phone)) {
+    toast.error('Please enter a valid 10-digit phone number');
+    return;
+  }
     setSaving(true);
     try {
       const payload = {
