@@ -28,7 +28,7 @@ It’s built with a robust **Node.js + Express backend** and a **React.js fronte
 - React.js  
 - React Router DOM   
 - Axios (for API requests)  
-- CSS / TailwindCSS  
+- CSS
 
 ### **Backend**
 - Node.js  
