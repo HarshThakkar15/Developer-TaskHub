@@ -149,7 +149,6 @@ exports.getPublicProfile = async (req, res) => {
         linkedin: user.linkedin || '',
         skills: user.skills || [],
         education: user.education || {},
-        certifications: user.certifications || [],
         theme: user.theme || 'minimal'
       },
       projects

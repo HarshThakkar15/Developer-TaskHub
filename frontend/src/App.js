@@ -1,5 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Home from './pages/Home';
 import Dashboard from './components/Dashboard/Dashboard';
@@ -23,6 +28,7 @@ function Layout() {
   return (
     <>
       {!hideNavbar && <Navbar />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
@@ -40,7 +46,7 @@ function Layout() {
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <Router basename="/">
         <Layout />
         <ToastContainer
           position="top-right"
@@ -52,7 +58,7 @@ export default function App() {
           draggable
           theme="colored"
         />
-      </BrowserRouter>
+      </Router>
     </AuthProvider>
   );
 }
