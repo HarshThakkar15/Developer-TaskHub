@@ -22,14 +22,14 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/users", userRoutes);
 
-// ✅ Serve frontend build
-const __dirname1 = path.resolve();
-app.use(express.static(path.join(__dirname1, "frontend", "build")));
+// // ✅ Serve frontend build
+// const __dirname1 = path.resolve();
+// app.use(express.static(path.join(__dirname1, "frontend", "build")));
 
-// ✅ Catch-all route (for React Router)
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"));
-});
+// // ✅ Catch-all route (for React Router)
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"));
+// });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
