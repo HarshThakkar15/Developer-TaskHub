@@ -1,4 +1,3 @@
-// frontend/src/api/api.js
 import axios from "axios";
 import { getToken, removeToken } from "../utils/auth";
 
