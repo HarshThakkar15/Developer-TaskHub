@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const openLink = (url) => window.open(url, '_blank');
+  const navigate = useNavigate();
 
   return (
     <div className="container" style={{ textAlign: 'center' }}>
@@ -12,7 +14,7 @@ export default function Home() {
 
       <button
         className="button"
-        onClick={() => (window.location = '/dashboard')}
+        onClick={() => navigate('/dashboard')}
         style={{
           display: 'block',
           margin: '40px auto',
