@@ -21,9 +21,9 @@ router.get('/public/project/:id', async (req, res) => {
       return res.status(404).json({ message: 'Project not found' });
     }
 
-    const { _id, title, description, tech, link, createdAt, updatedAt } = project;
+    const { _id, title, description, tags, tech,  repoUrl, liveUrl, link, createdAt, updatedAt } = project;
 
-    return res.json({ _id, title, description, tech, link, createdAt, updatedAt });
+    return res.json({ _id, title, description, tags, tech,  repoUrl, liveUrl, link, createdAt, updatedAt });
   } catch (err) {
     console.error('Public project fetch error:', err);
     res.status(500).json({ message: 'Server error' });
