@@ -128,7 +128,7 @@ exports.getPublicProfile = async (req, res) => {
     if (!user.published)
       return res.status(403).json({
         message:
-          'Portfolio not visible. Please publish it from your Portfolio Builder page.'
+          'The portfolio is unpublished.'
       });
 
     const projects = await Project.find({ owner: user._id, published: true })
