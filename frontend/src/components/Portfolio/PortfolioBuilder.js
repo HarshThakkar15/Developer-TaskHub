@@ -152,9 +152,11 @@ export default function PortfolioBuilder() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
               gap: 16,
               marginBottom: 60, 
+              width: '100%',
+              boxSizing: 'border-box',
             }}
           >
             {projects.length === 0 && <div className="card">No projects yet.</div>}

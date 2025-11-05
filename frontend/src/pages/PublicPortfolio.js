@@ -145,8 +145,10 @@ export default function PublicPortfolio() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit,minmax(500px,1fr))',
+            gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
             gap: 16,
+            width: '100%',
+            boxSizing: 'border-box',
           }}
         >
           {projects.map((proj) => (
