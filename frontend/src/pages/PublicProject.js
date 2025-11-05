@@ -11,7 +11,7 @@ export default function PublicProject() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await api.get(`/projects/public/${id}`);
+        const res = await api.get(`/projects/public/project/${id}`);
         setProject(res.data);
       } catch (err) {
         setError("Project not found or unavailable.");
