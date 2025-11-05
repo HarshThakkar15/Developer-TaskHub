@@ -14,6 +14,7 @@ import Profile from './pages/Profile';
 import ProjectPage from './pages/ProjectPage';
 import PortfolioBuilder from './components/Portfolio/PortfolioBuilder';
 import PublicPortfolio from './pages/PublicPortfolio';
+import PublicProject from './pages/PublicProject';
 import Navbar from './components/UI/Navbar';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
