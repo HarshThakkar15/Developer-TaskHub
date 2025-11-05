@@ -166,7 +166,7 @@ export default function PublicPortfolio() {
                 </div>
                 <button
                   className="button"
-                  onClick={() => navigate(`/projects/${proj._id}`)}
+                  onClick={() => navigate(`/projects/public/${proj._id}`)}
                   style={{
                     marginLeft: 'auto',
                     background: '#4f46e5',
