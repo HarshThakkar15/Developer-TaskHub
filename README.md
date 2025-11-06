@@ -117,7 +117,7 @@ Harsh Thakkar
 
 📧 thakkarharsh1508@gmail.com
 
-🌐 portfolio
+🌐 **[Portfolio](https://developer-taskhub.onrender.com/u/harsh-thakkar-uo87)**
 
 🐙 **[GitHub](https://github.com/HarshThakkar15)**
 

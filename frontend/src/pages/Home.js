@@ -79,7 +79,7 @@ export default function Home() {
               borderRadius: '8px',
               cursor: 'pointer',
             }}
-            onClick={() => openLink('https://developer-taskhub.onrender.com/u/h-apuc')}
+            onClick={() => openLink('https://developer-taskhub.onrender.com/u/harsh-thakkar-uo87')}
           >
             Portfolio
           </button>
