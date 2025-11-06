@@ -239,6 +239,31 @@ export default function PublicPortfolio() {
             </button>
           )}
         </div>
+        {/* FOOTER */}
+        <footer
+        style={{
+          textAlign: 'center',
+          marginTop: 60,
+          fontSize: '13px',
+          opacity: 0.8,
+        }}
+      >
+        <p>
+          Published by{' '}
+          <a
+            href="https://developer-taskhub.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: 'inherit',
+              textDecoration: 'underline',
+              fontWeight: 500,
+            }}
+          >
+            Developer TaskHub
+          </a>
+        </p>
+      </footer>
       </div>
     </div>
   );

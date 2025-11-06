@@ -159,7 +159,7 @@ const openLink = (url) => window.open(url, '_blank');
         }}
       >
         <div style={{ fontSize: '16px', marginBottom: '10px' }}>
-          Developed <strong>Harsh Thakkar</strong>
+          Developed by <strong>Harsh Thakkar</strong>
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
@@ -191,6 +191,21 @@ const openLink = (url) => window.open(url, '_blank');
             onClick={() => openLink('https://github.com/HarshThakkar15')}
           >
             GitHub
+          </button>
+
+          <button
+            className="button"
+            style={{
+              backgroundColor: '#b95b42ff',
+              color: 'white',
+              border: 'none',
+              padding: '8px 14px',
+              borderRadius: '8px',
+              cursor: 'pointer',
+            }}
+            onClick={() => openLink('https://developer-taskhub.onrender.com/u/h-apuc')}
+          >
+            Portfolio
           </button>
 
           <a
