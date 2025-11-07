@@ -17,6 +17,7 @@ export default function PublicPortfolio() {
         const res = await api.get(`/users/public/${username}`);
         setData(res.data);
         setTheme(res.data.user?.theme || 'minimal');
+        document.title = `${res.data.user?.name || username} Portfolio`;
       } catch (err) {
         console.error(err);
         setError(err.response?.data?.message || 'Could not load portfolio');
